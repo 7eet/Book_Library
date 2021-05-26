@@ -1,0 +1,15 @@
+extends layout 
+block content
+  div(class="addBookContainer")
+    form(action="/addBook", method="post")
+      div(class="bookTitle")
+        label(for="title") Title
+        input(type="text", name="title", required)
+      div(class="bookAuthor")
+        label(for="author") Author
+        input(type="text", name="author", required)
+      div(class="bookDescription")
+        label(for="description") Description
+        textarea(name="description", cols="30", rows="10")
+      div(class="bookSubmit")
+        button(type="submit", class="primary-btn") Add It

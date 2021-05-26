@@ -1,0 +1,337 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 18px;
+}
+
+nav {
+  padding: 10px;
+  min-height: 10%;
+  max-height: 35%;
+}
+
+.navbar {
+  background-color: #3b82f6;
+  color: #ffffff;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > ul {
+  display: none;
+  flex-direction: column;
+}
+
+.navbar > ul.activeFlex {
+  display: flex;
+  padding: 10px;
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-links > li {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.nav-links > li:hover {
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.nav-links > li > a {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+.logo {
+  font-size: 25px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.container,
+.booksContainer,
+.authorsContainer,
+.addBookContainer,
+.deleteContainer,
+.viewContainer {
+  position: relative;
+  min-height: 85%;
+  background-color: #ffffff;
+  padding: 10px;
+  padding-bottom: 5%;
+}
+
+.container {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 80px;
+}
+
+.container > h4,
+h5 {
+  margin: 20px 0px;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.container > h5 {
+  font-size: 20px;
+}
+
+.booksContainer {
+  display: grid;
+  grid-template-columns: 250px;
+  justify-content: center;
+  background-color: #3b82f6;
+}
+
+.addBookBtn {
+  position: absolute;
+  margin: 40px 5px;
+}
+
+.addBookBtn > a {
+  text-decoration: none;
+}
+
+.primary-btn {
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+form {
+  padding: 20px;
+}
+
+form > div {
+  margin: 10px 0px 30px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+div > label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+div > input,
+div > textarea {
+  padding: 20px;
+  font-size: 16px;
+  border: 2px solid #3b82f6;
+  border-radius: 20px;
+  color: #000000;
+}
+
+.card {
+  width: 240px;
+  height: 280px;
+  padding: 20px;
+  border-radius: none;
+  border-top-left-radius: 20px;
+  margin: 10px 0px;
+  margin-bottom: 0px;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: #e5e7eb; 
+  box-shadow: 0.5px 0.5px 10px gray;*/
+}
+
+.card-body {
+  padding: 20px 0px;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.card-footer {
+  text-align: end;
+  font-style: italic;
+}
+
+.viewBtnBelowCard {
+  border-bottom-left-radius: 20px;
+  width: 240px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #e5e7eb;
+  text-align: center;
+}
+
+.viewBtnBelowCard > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.viewContainer {
+  padding-top: 10%;
+}
+
+.viewContainer > div {
+  margin: 50px 0px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50px 200px;
+  grid-gap: 80px;
+}
+
+.authorList {
+  border: none;
+  color: #3b82f6;
+  margin: 20px 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authorList:hover {
+  border-bottom: 2px solid #3b82f6;
+}
+
+.badge {
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.textDescription {
+  overflow-wrap: break-word;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 5%;
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 600px) and (max-width: 920px) {
+  .booksContainer {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    justify-content: center;
+    grid-gap: 50px;
+  }
+}
+
+@media (min-width: 920px) {
+  .booksContainer {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    justify-content: center;
+    grid-gap: 50px;
+  }
+
+  .authorsContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1450px) {
+  .booksContainer {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    justify-content: center;
+    grid-gap: 50px;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+  }
+
+  .navbar > ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .addBookContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .authorsContainer {
+    width: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .bookTitle,
+  .bookAuthor,
+  .bookDescription,
+  .bookSubmit {
+    display: grid;
+    grid-template-columns: 100px 350px;
+    align-items: center;
+  }
+
+  .primary-btn {
+    grid-column-start: 2;
+  }
+
+  .card {
+    width: 240px;
+    height: 280px;
+  }
+
+  .link-btn {
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .link-btn:hover {
+    border: none;
+  }
+
+  .viewContainer > div {
+    margin: 50px 0px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 300px;
+    grid-gap: 100px;
+  }
+}
