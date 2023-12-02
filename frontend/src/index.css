@@ -1,0 +1,243 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  background-color: 
+  #343a40;
+  color: white;
+}
+
+.show {
+  display: inline;
+}
+
+.error {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form a {
+  color:#5cb85c
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+}
+
+.navBar div {
+  padding: 10px 20px;
+  background-color: #28a745;
+}
+
+.navBar div:first-child {
+  border-bottom-left-radius: 20px; 
+}
+
+.navBar div:last-child {
+  border-bottom-right-radius: 20px; 
+}
+
+.form_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-body p {
+  font-style: italic;
+}
+
+.authorArea, .descriptionArea {
+  font-style: italic;
+}
+
+::placeholder {
+  opacity: 0.5; /* Firefox */
+}
+
+form {
+  background-color: #f7f7f7;
+  color: #343a40;
+  display: flex;
+  flex-direction: column;
+  width: 70%; /* adjust this value to control the form's width */
+  gap: 30px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, button, textarea {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+input, textarea{
+   background-color: rgb(250, 251, 252); 
+   border-color: rgb(223, 225, 230); 
+   cursor: text; border-radius: 3px; border-width: 2px; 
+   border-style: solid;   
+  }  
+   input:hover, textarea:hover{ background-color: rgb(235, 236, 240); } 
+   input:focus, textarea:focus{ background-color: rgb(255, 255, 255); border-color: rgb(76, 154, 255); }
+
+button {
+  background-color: 
+  #28a745;
+  color: #343a40;
+  border: 2px solid #28a745;
+}
+
+button:hover {
+  background-color:#343a40 
+  ;
+  color: #f7f7f7;
+  border: 2px solid #343a40;
+}
+.home_page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+.card {
+  background: #f7f7f7;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25), 0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  transition: all ease 200ms;
+  margin-bottom: 30px;
+}
+
+.card button {
+  width: 100%;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h2 {
+  color: #222;
+  margin-top: -0.2em;
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease-in 100ms;
+}
+
+.card p {
+  color: #777;
+  margin: 20px 0px;
+}
+
+.card-body {
+  padding: 1.2em;
+}
+
+.viewbook {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 80vh;
+  color: black;
+}
+
+.viewbook {
+  background: white;
+  padding: 38px 36px;
+  margin: 40px;
+  border-radius: 40px;
+}
+
+.authorArea {
+  margin: 20px;
+}
+
+.authorArea, .descriptionArea {
+  font-size: 16px;
+} 
+
+
+
+@media only screen and (min-width: 760px) {
+
+    .home_page {
+      flex-direction: row;
+    }
+  
+    .card {
+      width: 50%;
+      margin: 30px;
+    }
+
+    form {
+      width: 50%;
+    }
+
+    .form_container {
+      min-height: 70vh;
+    }
+
+    .authorArea, .descriptionArea {
+      font-size: 18px;
+    } 
+  
+}
+@media only screen and (min-width: 1200px){
+  body {
+    font-size: 18px;
+  }
+
+  form {
+  width: 30%;
+  }
+
+  .card {
+    width: 30%;
+    margin: 30px;
+  }
+
+  input, button, textarea {
+    font-size: 18px;
+  }
+
+  .authorArea, .descriptionArea {
+    font-size: 20px;
+  } 
+
+}
